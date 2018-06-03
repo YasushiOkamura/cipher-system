@@ -1,0 +1,16 @@
+h2 学生一覧
+
+table
+  tr
+    th ID
+    th 名前
+    th 成績
+    th 年収
+    th 両親の有無
+  - @students.each do |student|
+    tr
+      td = student.id
+      td = student.name
+      td = student.result
+      td = student.parent_income
+      td = student.mother_existance
