@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      student: 学生
+ja:
+  activerecord:
+    attributes:
+      student:
+        name: 名前
+        result: 結果
+        mother_existance: 母親の有無
+        parent_income: 両親の収入
