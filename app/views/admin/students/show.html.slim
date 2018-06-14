@@ -1,0 +1,16 @@
+h2 学生 ID #{@student.id}
+
+p 
+  | 名前:
+  = @student.name
+p 
+  | 成績:
+  = @student.decrypt_result
+p 
+  | 母親の有無:
+  = @student.decrypt_mother_existance
+p
+  | 両親の収入:
+  = @student.decrypt_parent_income
+
+= link_to '一覧へ', admin_students_path

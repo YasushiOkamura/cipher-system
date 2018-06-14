@@ -1,10 +1,10 @@
 class CreateStudents < ActiveRecord::Migration[5.2]
   def change
     create_table :students do |t|
-      t.string :name
-      t.string :result
-      t.string :mother_existance
-      t.string :parent_income
+      t.text :name
+      t.text :result
+      t.text :mother_existance
+      t.text :parent_income
 
       t.timestamps
     end

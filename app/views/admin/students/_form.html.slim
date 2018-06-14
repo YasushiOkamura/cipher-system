@@ -1,0 +1,16 @@
+= form_for [:admin, @student] do |f|
+
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :result
+    = f.number_field :result, max: 100, min: 0
+  p
+    = f.label :mother_existance
+    = f.number_field :mother_existance, max: 1, min: 0
+  p
+    = f.label :parent_income
+    = f.number_field :parent_income
+
+  = f.submit '保存'

@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2018_06_03_142339) do
   enable_extension "plpgsql"
 
   create_table "students", force: :cascade do |t|
-    t.string "name"
-    t.string "result"
-    t.string "mother_existance"
-    t.string "parent_income"
+    t.text "name"
+    t.text "result"
+    t.text "mother_existance"
+    t.text "parent_income"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
