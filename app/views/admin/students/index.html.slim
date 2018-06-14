@@ -1,6 +1,6 @@
 h2 学生一覧
 
-= link_to '新規作成', new_student_path
+= link_to '新規作成', new_admin_student_path
 
 table
   tr
@@ -13,10 +13,10 @@ table
     th
   - @students.each do |student|
     tr
-      td = student.id
+      td = link_to student.id, admin_student_path(student)
       td = student.name
       td = student.result
       td = student.parent_income
       td = student.mother_existance
-      td = link_to '編集', edit_student_path(student)
-      td = link_to '削除', student_path(student), method: :delete
+      td = link_to '編集', edit_admin_student_path(student)
+      td = link_to '削除', admin_student_path(student), method: :delete
