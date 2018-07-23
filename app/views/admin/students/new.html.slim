@@ -1,5 +1,9 @@
-h2 学生 -新規作成-
+.ui.segment
+  h2 学生 -新規作成-
 
-= render 'form'
+  .ui.grid
+    .eight.wide.columns
+      = render 'form'
 
-= link_to '一覧画面へ', admin_students_path
+      = link_to '一覧画面へ', admin_students_path, class: 'ui button blue'
+      = link_to 'topへ', root_path, class: 'ui button green'

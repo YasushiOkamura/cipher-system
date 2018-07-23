@@ -1,22 +1,24 @@
-h2 学生一覧
+.ui.segment
+  .ui.header
+    h2 学生一覧
 
-= link_to '新規作成', new_admin_student_path
+  = link_to '新規作成', new_admin_student_path, class: 'ui button primary'
 
-table
-  tr
-    th ID
-    th 名前
-    th 成績
-    th 年収
-    th 両親の有無
-    th
-    th
-  - @students.each do |student|
+  table.ui.selectable.collapsing.table
     tr
-      td = link_to student.id, admin_student_path(student)
-      td = student.name
-      td = student.result
-      td = student.parent_income
-      td = student.mother_existance
-      td = link_to '編集', edit_admin_student_path(student)
-      td = link_to '削除', admin_student_path(student), method: :delete
+      th ID
+      th 名前
+      th 成績
+      th 年収
+      th 両親の有無
+      th
+      th
+    - @students.each do |student|
+      tr
+        td.center = link_to student.id, admin_student_path(student)
+        td.center = student.name
+        td.center = student.result&.to_s[0..9] + '...'
+        td.center = student.parent_income&.to_s[0..9] + '...'
+        td.center = student.mother_existance&.to_s[0..9] + '...'
+        td = link_to '編集', edit_admin_student_path(student), class: 'ui button blue'
+        td = link_to '削除', admin_student_path(student), method: :delete, class: 'ui button green'

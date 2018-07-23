@@ -1,7 +1,13 @@
-h1 テスト
+.ui.segment
+  .ui.header
+    h1 準同型暗号で成績管理システム
 
-p
-  = link_to '新規登録', new_student_path
+  .ui.grid
+    .two.wide.column
+      = link_to '新規登録', new_student_path, class: 'ui button green'
 
-p
-  = link_to '管理者ログイン', admin_students_path
+    .two.wide.column
+      = link_to '管理者ログイン', admin_students_path, class: 'ui button blue'
+    
+    .two.wide.column
+      = link_to '企業ログイン', company_students_path, class: 'ui button red'

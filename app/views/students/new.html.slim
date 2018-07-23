@@ -1,5 +1,8 @@
-h2 学生 -新規作成-
+.ui.segment
+  h2 学生 -新規作成-
 
-= render 'form'
+  .ui.grid
+    .eight.wide.columns
+      = render 'form'
 
-= link_to 'トップ画面へ', root_path
+      = link_to 'トップ画面へ', root_path
