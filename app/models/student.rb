@@ -1,8 +1,9 @@
 class Student < ApplicationRecord
   before_create :data_encrypt
 
-  KEY = 270298815046213337845177543197807536821
-  BIT_LENGTH = 32
+  # 512bit key
+  KEY = 8327111146272291426983943786406771087426117365534801452642159711197277282986365931764943874729708091177902142948066985065903829727042427582978125348137384
+  BIT_LENGTH = 16
 
   ############ 本来はこの関数はあってはならないので ##############
   def decrypt_result
@@ -20,7 +21,6 @@ class Student < ApplicationRecord
     cipher.decrypt(cipher_string_to_array(self.mother_existance))
   end
   ##################################################################
-  private
 
   def data_encrypt
     cipher = ::MyCipher.new(BIT_LENGTH, KEY, KEY)

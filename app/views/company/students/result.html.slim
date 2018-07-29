@@ -1,0 +1,33 @@
+.ui.segment
+  h1.header 結果
+
+  h2.header 母親がいる生徒
+  .ui.items
+    .item
+      .content
+        .header 合計人数
+        .description = @results[:mother_existance][:number_sum]
+    .item
+      .content
+        .header 合計
+        .description = @results[:mother_existance][:result_sum]
+    .item
+      .content
+        .header 平均
+        .description = @results[:mother_existance][:result_sum] / @results[:mother_existance][:number_sum]
+      
+  h2.header 母親がいない生徒
+  .ui.items
+    .item
+      .content
+        .header 合計人数
+        .description = @results[:mother_no_existance][:number_sum]
+    .item
+      .content
+        .header 合計
+        .description = @results[:mother_no_existance][:result_sum]
+    .item
+      .content
+        .header 平均
+        .description = @results[:mother_no_existance][:result_sum] / @results[:mother_no_existance][:number_sum]
+  h2.header 年収

@@ -7,4 +7,12 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :students
   end
+
+  namespace :company do
+    resources :students, only: [:index] do
+      collection do
+        get :result
+      end
+    end
+  end
 end

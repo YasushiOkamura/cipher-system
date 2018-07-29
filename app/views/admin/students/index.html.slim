@@ -21,4 +21,4 @@
         td.center = student.parent_income&.to_s[0..9] + '...'
         td.center = student.mother_existance&.to_s[0..9] + '...'
         td = link_to '編集', edit_admin_student_path(student), class: 'ui button blue'
-        td = link_to '削除', admin_student_path(student), method: :delete, class: 'ui button green'
+        td = link_to '削除', admin_student_path(student), method: :delete, class: 'ui button red'

@@ -1,0 +1,5 @@
+.ui.segment
+  h1.ui.header 成績統計データ for 企業
+  
+  = form_tag '/company/students/result', method: 'get'
+    = submit_tag '統計データ取得', class: 'ui button primary'
